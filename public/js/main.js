@@ -155,17 +155,8 @@ window.revealWords = revealWords;
 document.addEventListener('DOMContentLoaded', () => {
   const watchEl = document.getElementById('watchVideo');
   if (!watchEl) return;
-  let videoLoaded = false;
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting && !videoLoaded) {
-        videoLoaded = true;
-        const id = watchEl.dataset.videoId;
-        watchEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?autoplay=1&mute=1&rel=0" title="ICSO in concert" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
-      }
-    });
-  }, { threshold: 0.5 });
-  observer.observe(watchEl);
+  const id = watchEl.dataset.videoId;
+  watchEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?rel=0" title="ICSO in concert" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
 });
 
 // ---- Home page: hero carousel ----
