@@ -156,7 +156,33 @@ document.addEventListener('DOMContentLoaded', () => {
   const watchEl = document.getElementById('watchVideo');
   if (!watchEl) return;
   const id = watchEl.dataset.videoId;
-  watchEl.innerHTML = `<iframe src="https://www.youtube.com/embed/${id}?rel=0" title="ICSO in concert" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+  const START = 1818; // 30:18 in seconds
+
+  watchEl.innerHTML = `
+    <iframe id="watchIframe" src="https://www.youtube.com/embed/${id}?enablejsapi=1&mute=1&start=${START}&rel=0" title="ICSO in concert" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <button id="unmuteBtn" class="unmute-btn">🔇 Unmute</button>
+  `;
+  const iframe = document.getElementById('watchIframe');
+  const unmuteBtn = document.getElementById('unmuteBtn');
+  const post = (func, args = []) => iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', func, args }), '*');
+
+  let started = false;
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !started) {
+        started = true;
+        post('seekTo', [START, true]);
+        post('playVideo');
+      }
+    });
+  }, { threshold: 0.5 });
+  observer.observe(watchEl);
+
+  unmuteBtn.addEventListener('click', () => {
+    post('unMute');
+    unmuteBtn.textContent = '🔊 Sound on';
+    unmuteBtn.disabled = true;
+  });
 });
 
 // ---- Home page: hero carousel ----
