@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const watchEl = document.getElementById('watchVideo');
   if (!watchEl) return;
   const id = watchEl.dataset.videoId;
-  const START = 1818; // 30:18 in seconds
+  const START = 5487;
 
   watchEl.innerHTML = `
     <iframe id="watchIframe" src="https://www.youtube.com/embed/${id}?enablejsapi=1&mute=1&start=${START}&rel=0" title="ICSO in concert" allow="autoplay; encrypted-media" allowfullscreen></iframe>
