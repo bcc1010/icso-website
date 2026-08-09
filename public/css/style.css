@@ -134,10 +134,8 @@ nav.main a:hover,nav.main a[aria-current="page"]{color:var(--brass-light);}
 }
 
 @media(max-width:600px){
-  #heroCarousel .wrap{padding:0 52px;}
-  #heroPrev, #heroNext{width:34px;height:34px;font-size:1.2rem;}
-  #heroPrev{left:8px;}
-  #heroNext{right:8px;}
+  #heroCarousel .wrap{padding:0 28px;}
+  #heroPrev, #heroNext{display:none;}
 }
 
 .hero-bg{
@@ -467,3 +465,4 @@ img{
 @media(prefers-reduced-motion:reduce){.sticky-banner{transition:none;}}
 .hero h1, .hero .eyebrow, .hero .lede, main h2{ visibility:hidden; }
 .hero h1.split-ready, .hero .eyebrow.split-ready, .hero .lede.split-ready, main h2.split-ready{ visibility:visible; }
+
