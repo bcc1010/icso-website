@@ -1,0 +1,22 @@
+<header class="site" id="site-header">
+  <div class="nav-row">
+    <a class="brand" href="/" id="brandLink" data-page="<%= page %>">
+      <img src="https://icso.uk/wp-content/uploads/2023/01/ICSOText-1.png" alt="">
+      <span class="brand-text">Imperial College Symphony Orchestra<small>Entertaining the masses since 1948</small></span>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main">
+      <ul>
+        <li><a href="/" <%= page === 'home' ? 'aria-current="page"' : '' %>>Home</a></li>
+        <li><a href="/about" <%= page === 'about' ? 'aria-current="page"' : '' %>>About</a></li>
+        <li><a href="/concerts" <%= page === 'concerts' ? 'aria-current="page"' : '' %>>Concerts</a></li>
+        <li><a href="/join" <%= page === 'join' ? 'aria-current="page"' : '' %>>Join</a></li>
+        <li><a href="/support" <%= page === 'support' ? 'aria-current="page"' : '' %>>Support</a></li>
+        <li><a href="/committee" <%= page === 'committee' ? 'aria-current="page"' : '' %>>Committee</a></li>
+        <li><a href="/contact" <%= page === 'contact' ? 'aria-current="page"' : '' %>>Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

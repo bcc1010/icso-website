@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %></head>
+<body data-page="about">
+<a class="skip-link" href="#main">Skip to content</a>
+<%- include('partials/nav') %>
+
+<main id="main">
+  <section class="hero" style="padding:64px 0; background-image: url('/assets/icso-background.jpg');">
+    <div class="wrap">
+      <p class="eyebrow">Since 1948</p>
+      <h1><span id="icsoYears" data-count="<%= icsoYears %>">0</span> years of ICSO</h1>
+      <p class="lede">One of the UK's finest university orchestras — described as sounding "like a professional orchestra" by RPO Principal Bassoon Daniel Jamieson.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap grid cols-2" style="align-items:start;">
+      <div class="reveal">
+        <p class="eyebrow">Who we are</p>
+        <h2 style="font-size:1.6rem;">Imperial's flagship orchestra</h2>
+        <p>The Imperial College Symphony Orchestra ("ICSO") has been performing to a high standard and entertaining the masses since its founding in 1948. Around eighty players strong, ICSO is run by a committee of fourteen STEM students, performing across London and beyond — including our annual Spring Concert at Cadogan Hall, home of the Royal Philharmonic Orchestra.</p>
+        <p>ICSO has performed with professional soloists (incl. Charles Owen, Raphael Wallfisch, Andrew Zolinsky, Michael Thompson, Bernard Roberts, Lara Melda), alongside Imperial's own student talent with termly concerto performances. Highlights include a sold-out Cadogan Hall performance of Dvořák's Cello Concerto with BBC Young Musician 2012 Laura van der Heijden, a children's concert with Professor Lord Robert Winston, and, most recently, joining forces with choirs, soloists, and a professional chamber orchestra in February 2026 for an anniversary concert of Britten's War Requiem in Windsor Castle.</p>
+      </div>
+      <div class="reveal" style="margin-top:50px;">
+        <img src="/assets/destiny-and-dreams-spring-2022.jpg" alt="ICSO strings performing in Cadogan Hall, 2022" style="border-radius:2px;border:1px solid var(--line);">
+        <p style="margin:8px 0 0; font-size:0.85rem; color:var(--ink-soft); text-align:center; font-style:italic;">
+          <b>ICSO Spring Concert, Cadogan Hall (March 2022)</b><br>Nielsen's Symphony No. 4 "The Inextinguishable"<br>Conductor: Oliver Gooch
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap grid cols-2" style="align-items:start;">
+      <div class="reveal" style="order:1; display:flex; flex-direction:column; gap:12px;">
+        <div class="media-slot">
+          <img src="/assets/ghent-group.jpg" alt="ICSO orchestra group on tour in Ghent" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:inherit;">
+        </div>
+        <p style="margin:0; font-size:0.85rem; color:var(--ink-soft); text-align:center; font-style:italic;">
+          <b>ICSO Tour to Ghent, Belgium (June 2026)</b><br>Joined by players from IC Sinfonietta, Ghent University Harmony Orchestra, Ghent University Symphony Orchetra, Higher Conservatory of Music of Málaga, Royal Academy of Music, and University of London Symphony Orchestra
+        </p>
+      </div>
+
+      <div class="reveal" style="order:2;">
+        <p class="eyebrow">Awards and on tour</p>
+        <h2 style="font-size:1.6rem;">Awards and a passport full of stamps</h2>
+        <p>ICSO's first TV appearance came at Christmas 2002, in a Channel 4 documentary that transformed punk singer Chris Sweeney into a conductor capable of leading the Royal Philharmonic Orchestra: this won a BAFTA and the Golden Rose of Montreux. In 2003, ICSO featured in Robert Winston's BBC series "The Human Mind." In 2008, ICSO won "University Orchestra of the Year" in a one-off competition run by the Royal Philharmonic Orchestra.</p>
+        <p>Recent ICSO international tours have been to Spain, South Africa, Italy, Czechia and Belgium. These tours have led ICSO to the Johannesburg International Mozart Festival, a 2014 UNICEF benefit in Helsinki's Sibelius Hall, and concerts in Ghent with musicians from London, Belgian, and Spanish universities (June 2026).</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap grid cols-2" style="align-items:start;">
+      <div class="reveal">
+        <p class="eyebrow">Socials</p>
+        <h2 style="font-size:1.6rem;">"Come to Union!"</h2>
+        <p>As well as holding high-standard concerts, ICSO also ensures our social side is great too — we have two social secretaries in the committee dedicated to this. <i>"Come to Union!"</i> (that being Imperial's Student Union) is a ritual post-rehearsal message; we really encourage all ICSO players to stick around after rehearsals to make new friends and to get involved in the socials across the year (Thorpe Park, watch parties, etc.), often joined with other ensembles.</p>
+        <p>You can also look forward to mid-rehearsal breaks with free biscuits, treats and hot drinks to chat over! (Everyone is more than welcome to contribute...)</p>
+      </div>
+      <div class="reveal" style="margin-top:50px;">
+        <img src="/assets/socials.jpeg" alt="An example of an ICSO social, 2026" style="border-radius:2px;border:1px solid var(--line);">
+        <p style="margin:8px 0 0; font-size:0.85rem; color:var(--ink-soft); text-align:center; font-style:italic;">
+          <b>Social: ICSO Testing Their Luck...</b><br>Definitely an interesting way to wind down after rehearsal. Please gamble responsibly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="conductor" class="tight">
+    <div class="wrap grid cols-2" style="align-items:start;">
+      <div class="reveal" style="order:2;">
+        <p class="eyebrow">Our conductor</p>
+        <h2>Oliver Gooch</h2>
+        <p>ICSO is currently conducted by Oliver Gooch. An inspiring and charismatic musician, Oliver is highly regarded by colleagues, critics and audiences alike. He has collaborated in conducting several major UK orchestras (LSO, Philharmonia, BBC Symphony, Hallé, Orchestra of the Royal Opera House, Northern Sinfonia), and is also a regular guest conductor of the Royal Philharmonic Orchestra.</p>
+
+        <blockquote class="pull">
+          "Oliver Gooch, conducting the Royal Philharmonic Orchestra, approaches the score with a blend of command and flexibility, never short-changing the grand emotional climaxes."
+          <cite>George Hall, The Guardian</cite>
+        </blockquote>
+
+        <div class="faq accordion" style="margin: 24px 0;">
+          <details>
+            <summary>Click here for more details about conductor Oliver Gooch</summary>
+            <p><i>This information is from the unrevamped ICSO website, dating back to 2023. Details about newer years is to be added.</i></p>
+
+            <p>Antonio Pappano created a position for Oliver Gooch at the Royal Opera House as the first Associate Conductor (Vilar) and he has since made his Royal Opera debut with them on tour in Australia with Haydn's 'L'Isola Disabitata'. He also received a Southbank Sky Arts Award nomination for the world premiere of Heart of Darkness in the Linbury.</p>
+            <p>Mr Gooch is rapidly establishing a reputation as a conductor of considerable versatility in a wide range of symphonic and operatic repertoire. Following his appointment by Sir Antonio Pappano as the first Associate Young Artist at the Royal Opera House, Covent Garden in 2003, his conducting career to date has seen collaborations with many of the major UK orchestras, including the LSO, Philharmonia, BBC Symphony, Hallé, Orchestra of the Royal Opera House and northern Sinfonia. He has also continued to have a fruitful relationship with the Royal Philharmonic Orchestra, as a regular guest conductor. Further afield, he has made highly acclaimed debuts with the Queensland and Tasmanian Symphonies in Australia, Ne Work Sinfonietta, Orchestra i Pomeriggi Musicali in Milan, and Orchestra della Toscana. He has an ongoing relationship with Italy's major touring company, Associazione Lirica e Concertistica Italiana (AsLico).</p>
+            <p>He remains committed to nurturing new talent. He spearheaded the development of two Young Artist Programmes, one for Mid Wales Opera and, most recently Iford Arts' New Generation Artists, and initiative to identify and support young singers, directors, designers, costume designers and conductors in the early stages of their careers. He has also conducted and presented a number of community operas as Artistic Director of Music at Bray, in partnership with the Windsor Festival, including Noye's Fludde, The Happy Prince, The Little Sweep, Amahl and the Night Visitors and Saint Nicolas. He was also invited to conduct performances of Noye's Fludde with over five hundred school children for the North Wales International Festival in St Asaph's Cathedral in 2015. He has received further recognition for his desire to take opera into new places. His resurrection of the 18th century ballad opera, Inkle and Yarico by Samuel Arnold in Cambridge's Fitzwilliam Museum, was produced alongside the anniversary of the Act to abolish the salve trade, broadcast on BBC Radio 3.</p>
+            <p>Oliver received his training at Cambridge University, Guildhall School of Music and Drama and the National Opera Studio. He studied conducting at the Tanglewood Festival under Robert Spano and Seiji Ozawa, and was subsequently nominated for the prestigious Rolex/Mentor Protégé Arts Initiative in Geneva, under Sir Colin Davis. In 2006 he was awarded a prestigious Clore Fellowship, a programme designed to nurture new generations of cultural leaders, and in 2007, he was elected the youngest Fellow of the Royal Society of Arts.</p>
+          </details>
+        </div>
+      </div>
+
+      <div class="reveal" style="order:1; display:flex; flex-direction:column; gap:12px;">
+        <img src="https://icso.uk/wp-content/uploads/2023/01/ICSO06.jpg" alt="Conductor Oliver Gooch conducting Imperial College Symphony Orchestra" style="border-radius:2px;border:1px solid var(--line);">
+        <p style="margin:0; font-size:0.85rem; color:var(--ink-soft); text-align:center; font-style:italic;">
+          <b>Oliver Gooch, conductor</b>
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+</body>
+</html>

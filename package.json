@@ -1,0 +1,15 @@
+{
+  "name": "icso-website",
+  "version": "1.0.0",
+  "description": "Imperial College Symphony Orchestra — Node/Express site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "compression": "^1.7.4"
+  }
+}

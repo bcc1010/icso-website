@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %></head>
+<body data-page="committee">
+<a class="skip-link" href="#main">Skip to content</a>
+<%- include('partials/nav') %>
+
+<main id="main">
+  <section class="hero" style="padding:64px 0; background-image: url('/assets/icso-background.jpg');">
+    <div class="wrap">
+      <p class="eyebrow">Election results</p>
+      <h1>Committee</h1>
+      <p class="lede"> View the elected ICSO committee for 2026/27 below.</p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap">
+      <div class="grid cols-3" id="committee"></div>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+
+<script>
+const committee = [
+  ["Chair", [["Benjamin Cummings","Joint Maths & Computing, Year 4 | Cello"]]],
+  ["Vice Chair", [["Kaelyn Soh","Chemistry, Year 3 | Violin"]]],
+  ["Treasurer", [["Mark Pearce","Mathematics, Year 2 | Clarinet"]]],
+  ["Secretary & Tour Manager", [["Eric Liu","Materials Science & Engineering, Year 2 | Cello"]]],
+  ["Librarians", [["Mathilde Labbé","Biochemistry, Year 4 | Violin"],["Lucas Pigott","Mathematics, PhD | Violin"]]],
+  ["Social Secretaries", [["Kasper Vermeesch","Mathematics, Year 3 | Violin"],["Luca White","Mathematics, Year 3 | Cello"]]],
+  ["Publicity Manager", [["Katherine Baker","Biology, Year 2 | Violin"]]],
+  ["Hall Manager", [["Eva Liu","Medical Biosciences, Year 2 | Percussion"]]],
+  ["Ticket Officer", [["Emma Owen","Mechanical Engineering, Year 2 | French Horn"]]],
+  ["Fundraising Officer", [["Natalie Wong","Mechanical Engineering, Year 2 | Viola"]]],
+  ["Web Editor", [["Bert Chun Chang","Computing, Year 2 | Trumpet"]]],
+];
+
+// Pre-paired {background, text} combos from the ICSO palette — contrast is guaranteed
+// because each pairing is hand-picked, not computed.
+const palettes = [
+  { bg:'#0B1620', text:'#F3EFE4', soft:'rgba(243,239,228,.72)', eyebrow:'#D8B778', border:'rgba(243,239,228,.15)' }, // near-black navy
+  { bg:'#101E2B', text:'#F3EFE4', soft:'rgba(243,239,228,.72)', eyebrow:'#D8B778', border:'rgba(243,239,228,.15)' }, // ink
+  { bg:'#14293B', text:'#F3EFE4', soft:'rgba(243,239,228,.72)', eyebrow:'#D8B778', border:'rgba(243,239,228,.15)' }, // deep navy
+  { bg:'#1C3247', text:'#F3EFE4', soft:'rgba(243,239,228,.72)', eyebrow:'#D8B778', border:'rgba(243,239,228,.15)' }, // ink-soft
+  { bg:'#234055', text:'#F3EFE4', soft:'rgba(243,239,228,.74)', eyebrow:'#D8B778', border:'rgba(243,239,228,.16)' }, // slate blue
+];
+// Assign one palette per card, capped at 3 uses of any colour
+// (with 11 cards and 10 colours, at least one repeat is guaranteed automatically)
+function assignPalettes(n, maxPerColour = 3) {
+  const counts = new Array(palettes.length).fill(0);
+  const assignment = [];
+  for (let i = 0; i < n; i++) {
+    let idx, attempts = 0;
+    do {
+      idx = Math.floor(Math.random() * palettes.length);
+      attempts++;
+    } while (counts[idx] >= maxPerColour && attempts < 200);
+    counts[idx]++;
+    assignment.push(palettes[idx]);
+  }
+  return assignment;
+}
+const cardPalettes = assignPalettes(committee.length);
+
+document.getElementById('committee').innerHTML = committee.map(([role, people], i) => {
+  const p = cardPalettes[i];
+  return `
+  <div class="card reveal" style="transition-delay:${i * 15}ms; background:${p.bg}; border-color:${p.border};">
+    <p class="eyebrow" style="margin-bottom:10px; color:${p.eyebrow};">${role}</p>
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      ${people.map(([name,instrument]) => `
+        <div class="person">
+            <div>
+                <p style="margin:0;font-weight:600;color:${p.text};">${name}</p>
+                ${instrument ? `<p style="margin:2px 0 0;font-size:.85rem;color:${p.soft};line-height:1.4;">${instrument.split('|').map(s => s.trim()).join('<br>')}</p>` : ''}
+            </div>
+        </div>`).join(`<hr style="border:0;border-top:1px solid ${p.border};margin:0;">`)}
+    </div>
+  </div>`;
+}).join('');
+window.initReveal && window.initReveal();
+</script>
+</body>
+</html>

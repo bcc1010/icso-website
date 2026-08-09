@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %></head>
+<body data-page="home">
+<%- include('partials/intro') %>
+<a class="skip-link" href="#main">Skip to content</a>
+<%- include('partials/nav') %>
+
+<main id="main">
+
+<section class="hero" id="heroCarousel">
+  <div class="hero-bg active" id="heroBgA"></div>
+  <div class="hero-bg" id="heroBgB"></div>
+  <div class="wrap" id="heroWrapA"></div>
+  <div class="wrap" id="heroWrapB"></div>
+  <button class="hero-arrow left" id="heroPrev" aria-label="Previous highlight">‹</button>
+  <button class="hero-arrow right" id="heroNext" aria-label="Next highlight">›</button>
+  <div class="hero-dots" id="heroDots"></div>
+</section>
+
+  <section class="tight">
+    <div class="wrap grid cols-3">
+      <div class="card reveal">
+        <p class="eyebrow">Est. 1948</p>
+        <h3 style="font-size:1.3rem;"><span id="icsoYears" data-count="<%= icsoYears %>">0</span> years at Imperial</h3>
+        <p>With around 80 dedicated STEMB student musicians and multiple concerto soloists per year, ICSO has been the flagship orchestra of Imperial College since 1948.</p>
+        <p>Read about conductor Oliver Gooch <a href="/about#conductor">here</a> and view ICSO's current committee <a href="/committee">here</a>.</p>
+      </div>
+      <div class="card reveal">
+        <p class="eyebrow">Prizes</p>
+        <h3 style="font-size:1.3rem;">An award-winning history</h3>
+        <p>ICSO's TV debut (Channel 4) in 2002 won a BAFTA and the Golden Rose of Montreux.</p>
+        <p>ICSO also won "University Orchestra of the Year" in a one-off 2008 competition against Cambridge, Southampton, and Manchester run by the Royal Philharmonic Orchestra.</p>
+      </div>
+      <div class="card reveal">
+        <p class="eyebrow">Performance Venues</p>
+        <h3 style="font-size:1.3rem;">Across London and abroad</h3>
+        <p>We perform our annual Spring Concert at Cadogan Hall, with other venues including Imperial's Great Hall, RCM's Amaryllis Fleming Hall, and Windsor Castle.</p>
+        <p>Recent tours have led ICSO to Spain, South Africa, Italy, Finland, Czechia, and Belgium.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">Watch</p>
+        <h2>From the concert hall</h2>
+      </div>
+      <div class="media-slot reveal" id="watchVideo" data-video-id="-f0cP-uu2Wo"></div>
+      <p style="margin-top:10px;font-size:.85rem;color:var(--ink-soft);text-align:center;font-style:italic;">ICSO Spring Concert at Cadogan Hall (March 2025)</p>
+    </div>
+  </section>
+
+  <section class="tight" style="background:var(--ink);color:var(--paper);">
+    <div class="wrap reveal" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;">
+      <div>
+        <p class="eyebrow">Play with us</p>
+        <h2 style="color:#fff;font-size:1.8rem;">Getting involved, a step-by-step guide:<br><br>   1. Check out our <a href="https://www.instagram.com/icsorchestra/", class="word">Instagram</a> for the latest updates<br>2. Come chat with us at Imperial's <a href="https://www.imperialcollegeunion.org/whats-on/events/welcome-fair-2026", class="word">Welcome Fair</a><br>3. Sign up for an <a href="/join", class="word">audition</a>. Good luck!</h2>
+      </div>
+      <a class="btn" href="/join">Audition FAQs</a>
+    </div>
+  </section>
+</main>
+
+<%- include('partials/footer') %>
+
+<script>
+const heroSlides = [
+  { img:'/assets/ghent.jpg', eyebrow:'Past highlight • June 2026', title:'ICSO Tour to<br>Ghent, Belgium', lede:"ICSO and Sinfonietta teamed up with London-based, Belgian, and Spanish university orchestras for two concerts in Ghent amidst the June heatwave. Programmed fiery Spanish works from Giminéz & Rimsky-Korsakov, and featured 4th-year biomedical engineer Robyn Liu in Dvořák's Cello Concerto." },
+  { img:'/assets/war-requiem-2026.jpg', eyebrow:'Past highlight • 28 February 2026', title:"Benjamin Britten's<br>War Requiem", lede:"As part of the Windsor Festival, an extended ICSO joins with Imperial College Choirs, Coventry Cathedral Chorus, Orpheus Sinfonia, the Choristers of St George's Chapel and several solo voices for an anniversary performance of Britten's pacifist masterwork in St George's Chapel, Windsor Castle." }
+];
+window.__heroSlides = heroSlides;
+</script>
+</body>
+</html>
