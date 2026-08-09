@@ -94,13 +94,13 @@ nav.main a:hover,nav.main a[aria-current="page"]{color:var(--brass-light);}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
 
 @media(max-width:820px){
-  nav.main{display:none;width:100%;}
+  .nav-row{display:grid;grid-template-columns:1fr auto;align-items:center;position:relative;}
+  .brand{grid-column:1;min-width:0;}
+  .nav-toggle{grid-column:2;display:flex;}
+  nav.main{grid-column:1 / -1;display:none;width:100%;}
   nav.main.open{display:block;animation:slideDown .25s var(--ease);}
   nav.main ul{flex-direction:column;gap:0;padding:14px 0 4px;}
   nav.main a{display:block;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1);}
-  .nav-row{flex-wrap:wrap;position:relative;}
-  .nav-toggle{display:flex;}
-  .brand{min-width:0;flex:1 1 auto;}
   .brand-text{font-size:.9rem;}
 }
 @keyframes slideDown{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
@@ -193,7 +193,10 @@ nav.main a:hover,nav.main a[aria-current="page"]{color:var(--brass-light);}
 #heroNext{
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'/%3E%3C/svg%3E");
 }
-#heroPrev:hover, #heroNext:hover{background-color:rgba(16,30,43,.8);border-color:var(--brass-light);transform:translateY(-50%) scale(1.08);}
+@media (hover:hover) and (pointer:fine){
+  #heroPrev:hover, #heroNext:hover{background-color:rgba(16,30,43,.8);border-color:var(--brass-light);transform:translateY(-50%) scale(1.08);}
+}
+#heroPrev:active, #heroNext:active{background-color:rgba(16,30,43,.8);border-color:var(--brass-light);transform:scale(0.92);}
 #heroPrev{left:20px;}
 #heroNext{right:20px;}
 @media(max-width:820px){
