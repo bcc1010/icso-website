@@ -6,7 +6,7 @@
   --brass:#B4894C;
   --brass-light:#D8B778;
   --burgundy:#6E1E28;
-  --paper:#F3EFE4;
+  --paper:#F7F6F2;
   --paper-dim:#E7DFCB;
   --line:rgba(16,30,43,0.14);
   --max:1180px;
@@ -20,12 +20,12 @@ body{
   margin:0;
   background:var(--paper);
   color:var(--ink);
-  font-family:'Source Sans 3',sans-serif;
+  font-family:'Inter',sans-serif;
   font-size:17px;
   line-height:1.65;
 }
 h1,h2,h3,.display{
-  font-family:'Fraunces',serif;
+  font-family:'Inter',sans-serif;
   font-weight:600;
   line-height:1.08;
   color:var(--ink);
@@ -35,7 +35,7 @@ a{color:inherit;}
 img{max-width:100%;display:block;}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
 .eyebrow{
-  font-family:'Source Sans 3',sans-serif;
+  font-family:'Inter',sans-serif;
   text-transform:uppercase;
   letter-spacing:.14em;
   font-size:.75rem;
@@ -64,8 +64,8 @@ header.site.scrolled .nav-row{padding-top:8px;padding-bottom:8px;}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--paper);}
 .brand img{height:34px;width:auto;filter:brightness(0) invert(1);transition:transform .3s var(--ease);}
 .brand:hover img{transform:rotate(-4deg) scale(1.05);}
-.brand-text{font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em;}
-.brand-text small{display:block;font-family:'Source Sans 3',sans-serif;font-weight:400;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brass-light);}
+.brand-text{font-family:'Inter',sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.01em;}
+.brand-text small{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--brass-light);}
 nav.main ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
 nav.main a{
   position:relative;
@@ -253,11 +253,11 @@ section.tight{padding:30px 0;}
 @media(max-width:760px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr;}}
 
 blockquote.pull{
-  font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+  font-family:'Inter',sans-serif;font-style:italic;font-weight:500;
   font-size:1.5rem;line-height:1.35;color:var(--burgundy);
   border-left:3px solid var(--brass);padding:4px 0 4px 24px;margin:36px 0;
 }
-blockquote.pull cite{display:block;font-family:'Source Sans 3',sans-serif;font-style:normal;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;}
+blockquote.pull cite{display:block;font-family:'Inter',sans-serif;font-style:normal;font-size:.85rem;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;}
 
 /* ---- Branded card ---- */
 .card.branded{
@@ -295,8 +295,8 @@ blockquote.pull cite{display:block;font-family:'Source Sans 3',sans-serif;font-s
 .staff svg{display:block;min-width:760px;width:100%;height:auto;}
 .staff-line{stroke:var(--line);stroke-width:1;}
 .staff-note circle{fill:var(--paper);stroke:var(--burgundy);stroke-width:2.5;}
-.staff-note text.year{font:700 13px 'Source Sans 3',sans-serif;fill:var(--ink);}
-.staff-note text.label{font:italic 500 13px 'Fraunces',serif;fill:var(--ink-soft);}
+.staff-note text.year{font:700 13px 'Inter',sans-serif;fill:var(--ink);}
+.staff-note text.label{font:italic 500 13px 'Inter',sans-serif;fill:var(--ink-soft);}
 
 /* ---- Accordion triangle (concerts page) ---- */
 .faq.accordion summary{
@@ -337,7 +337,7 @@ blockquote.pull cite{display:block;font-family:'Source Sans 3',sans-serif;font-s
 .person .swatch{
   width:64px;height:64px;border-radius:50%;background:var(--ink);flex:none;
   display:flex;align-items:center;justify-content:center;color:var(--brass-light);
-  font-family:'Fraunces',serif;font-weight:600;position:relative;
+  font-family:'Inter',sans-serif;font-weight:600;position:relative;
   transition:transform .2s var(--ease);
 }
 .person:hover .swatch{transform:scale(1.08) rotate(-3deg);}
@@ -367,7 +367,7 @@ textarea{min-height:120px;resize:vertical;}
 /* ---- FAQ accordion ---- */
 .faq details{border-bottom:1px solid var(--line);padding:14px 0;}
 .faq summary{
-  font-family:'Fraunces',serif;font-weight:600;font-size:1.05rem;
+  font-family:'Inter',sans-serif;font-weight:600;font-size:1.05rem;
   cursor:pointer;list-style:none;display:flex;justify-content:space-between;
   align-items:center;gap:12px;color:var(--ink);
 }
@@ -496,7 +496,7 @@ img{
 .steps-list{
   margin:0; padding-left:22px;
   color:#EDE6D2;
-  font-family:'Fraunces',serif;
+  font-family:'Inter',sans-serif;
   font-size:1.15rem;
   line-height:1.5;
   display:flex; flex-direction:column; gap:6px;
