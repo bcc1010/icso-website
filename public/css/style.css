@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
 
 :root{
   --ink:#101E2B;
@@ -21,7 +21,7 @@ body{
   background:var(--paper);
   color:var(--ink);
   font-family:'Inter',sans-serif;
-  font-size:15px;
+  font-size:17px;
   line-height:1.65;
 }
 h1,.display{
@@ -41,7 +41,7 @@ img{max-width:100%;display:block;}
   font-family:'Inter',sans-serif;
   text-transform:uppercase;
   letter-spacing:.14em;
-  font-size:.70rem;
+  font-size:.75rem;
   font-weight:700;
   color:var(--brass);
 }
@@ -72,7 +72,7 @@ header.site.scrolled .nav-row{padding-top:8px;padding-bottom:8px;}
 nav.main ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
 nav.main a{
   position:relative;
-  text-decoration:none;color:var(--paper);font-size:.88rem;letter-spacing:.02em;
+  text-decoration:none;color:var(--paper);font-size:.92rem;letter-spacing:.02em;
   padding-bottom:4px;border-bottom:2px solid transparent;
   transition:color .2s ease;
 }
