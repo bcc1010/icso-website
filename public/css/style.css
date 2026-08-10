@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap');
 
 :root{
   --ink:#101E2B;
@@ -24,7 +24,10 @@ body{
   font-size:17px;
   line-height:1.65;
 }
-h1,h2,h3,.display{
+h1,.display{
+  font-family:'Fraunces',serif;
+}
+h2,h3{
   font-family:'Inter',sans-serif;
   font-weight:600;
   line-height:1.08;
@@ -253,7 +256,7 @@ section.tight{padding:30px 0;}
 @media(max-width:760px){.grid.cols-3,.grid.cols-2{grid-template-columns:1fr;}}
 
 blockquote.pull{
-  font-family:'Inter',sans-serif;font-style:italic;font-weight:500;
+  font-family:'Fraunces',serif;font-style:italic;font-weight:500;
   font-size:1.5rem;line-height:1.35;color:var(--burgundy);
   border-left:3px solid var(--brass);padding:4px 0 4px 24px;margin:36px 0;
 }
