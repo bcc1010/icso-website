@@ -510,3 +510,5 @@ img{
   display:flex; flex-direction:column; gap:6px;
 }
 .steps-list a{ color:var(--brass-light); }
+
+header.site .brand-text{font-family:'Fraunces',serif;font-weight:600;}
