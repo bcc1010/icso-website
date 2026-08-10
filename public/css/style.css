@@ -255,6 +255,7 @@ section.tight{padding:30px 0;}
 .section-head{max-width:60ch;margin-bottom:34px;}
 .divider{height:1px;background:var(--line);border:0;margin:0;}
 .card{background:#fff;border:1px solid var(--line);padding:26px;border-radius:var(--radius);transition:transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);}
+.card:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(16,30,43,.12);border-color:var(--brass);}
 .grid{display:grid;gap:24px;}
 .grid.cols-3{grid-template-columns:repeat(3,1fr);}
 .grid.cols-2{grid-template-columns:repeat(2,1fr);}
