@@ -21,7 +21,7 @@ body{
   background:var(--paper);
   color:var(--ink);
   font-family:'Inter',sans-serif;
-  font-size:17px;
+  font-size:16px;
   line-height:1.65;
 }
 h1,.display{
@@ -41,7 +41,7 @@ img{max-width:100%;display:block;}
   font-family:'Inter',sans-serif;
   text-transform:uppercase;
   letter-spacing:.14em;
-  font-size:.75rem;
+  font-size:.72rem;
   font-weight:700;
   color:var(--brass);
 }
@@ -72,7 +72,7 @@ header.site.scrolled .nav-row{padding-top:8px;padding-bottom:8px;}
 nav.main ul{list-style:none;display:flex;gap:26px;margin:0;padding:0;}
 nav.main a{
   position:relative;
-  text-decoration:none;color:var(--paper);font-size:.92rem;letter-spacing:.02em;
+  text-decoration:none;color:var(--paper);font-size:.88rem;letter-spacing:.02em;
   padding-bottom:4px;border-bottom:2px solid transparent;
   transition:color .2s ease;
 }
