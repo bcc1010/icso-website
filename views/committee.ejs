@@ -41,12 +41,13 @@ const committee = [
 // Pre-paired {background, text} combos from the ICSO palette — contrast is guaranteed
 // because each pairing is hand-picked, not computed.
 const palettes = [
+  { bg:'#101E2B', text:'#F3EFE4', soft:'rgba(243,239,228,.72)', eyebrow:'#D8B778', border:'rgba(243,239,228,.15)' }, // ink
   { bg:'#14293B', text:'#F3EFE4', soft:'rgba(243,239,228,.72)', eyebrow:'#D8B778', border:'rgba(243,239,228,.15)' }, // deep navy
   { bg:'#1C3247', text:'#F3EFE4', soft:'rgba(243,239,228,.72)', eyebrow:'#D8B778', border:'rgba(243,239,228,.15)' }, // ink-soft
   { bg:'#234055', text:'#F3EFE4', soft:'rgba(243,239,228,.74)', eyebrow:'#D8B778', border:'rgba(243,239,228,.16)' }, // slate blue
 ];
 // Assign one palette per card, capped at 3 uses of any colour
-// (with 11 cards and 10 colours, at least one repeat is guaranteed automatically)
+// (with 11 cards and 3 colours, at least one repeat is guaranteed automatically)
 function assignPalettes(n, maxPerColour = 3) {
   const counts = new Array(palettes.length).fill(0);
   const assignment = [];
