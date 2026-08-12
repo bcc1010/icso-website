@@ -496,9 +496,10 @@ img{
 .steps-list{
   margin:0; padding-left:22px;
   color:#EDE6D2;
-  font-family:'Fraunces',serif;
-  font-size:1.15rem;
-  line-height:1.5;
+  font-family:'Source Sans 3',sans-serif;
+  font-size:20px;
+  line-height:1.65;
   display:flex; flex-direction:column; gap:6px;
 }
+
 .steps-list a{ color:var(--brass-light); }
