@@ -1,29 +1,20 @@
-# ICSO website — Node/Express rebuild
+# ICSO Website, Updated 2026
+The old Imperial College Symphony Orchestra ("ICSO") website ran on WordPress. While functional, this contained outdated information and was archaic in its design, featuring unclear subpage URLs and large blocks of text, rather than clear sections. As the elected web editor for the 2026/27 academic year, I was tasked with creating an updated website, fit for 2026 and better reflecting our unique position as Imperial's flagship orchestra since 1948.
 
-## Run it
+This is a Node.js website that uses vanilla JavaScript animations, making for a lightweight but breathable and easily comprehensible site. Note that all of the information has been revamped for 2026, and the website features embedded media for to recent ICSO concert performances, as well as a clear page regarding the Auditions process. This is to ensure that prospective auditionees and ICSO members know our ethos and what to expect, just from spending a minute or two on the website.
+
+Note that Render is being used as the website of choice for hosting.
+If you are a web editor for ICSO for this year, then find all relevant information in the provided handover document.
+
+## Running the site locally
+
+In terminal of the working directory, run:
 ```
 npm install
 npm start
 ```
-Then open http://localhost:3000 — no separate local-server workaround needed like the old `fetch()`-based include.js (that only worked over http, not file://). Header/footer are now real server-side includes (EJS partials), rendered once per request.
+Then, go to a browser and open http://localhost:3000
 
-## What changed
-- **Express + EJS** instead of static HTML + client-side `fetch()` includes. Nav/footer live in `views/partials/`, one source of truth, no CORS/file:// gotcha.
-- **All page text is untouched** — every paragraph, heading, FAQ answer, bio, and committee entry is copied verbatim from your original files.
-- **One bug fixed**: `support/index.html` had a stray `<<section>` (double angle bracket) that would have broken rendering — corrected to `<section>`.
-- **Intro splash**: full-screen animated ICSO logo reveal on first load each browser session (uses `sessionStorage` so it doesn't replay on every internal link click — only once per visit). Respects `prefers-reduced-motion`.
-- **Scroll reveals**: cards, section heads, and images fade/rise into view via `IntersectionObserver` as you scroll (`.reveal` class + `initReveal()` in `main.js`).
-- **Sticky header** now shrinks slightly and gains a shadow once you scroll.
-- **Count-up animation** for "N years at Imperial" / "N years of ICSO" instead of the number just appearing.
-- **Nav underline, card lift, button hover/press states** — small motion polish throughout, all reduced-motion safe.
-- Asset/script paths are now root-relative (`/css/style.css`, `/assets/...`) instead of the old `../` relative paths, so nothing breaks moving between routes.
+## The website
 
-## What I could NOT migrate
-- **`/concerts`** — this page was linked from your nav and footer but its HTML was never included in what you gave me, so there's no source text for me to move. The route currently 404s with a note. Send me that file and I'll wire it in with the same treatment.
-- **Images** — none of the actual image files (`assets/*.jpg`, etc.) were uploaded, only the HTML/CSS referencing them. Drop your real images into `public/assets/` using the same filenames referenced in the code (e.g. `ghent.jpg`, `war-requiem-2026.jpg`, `destiny-and-dreams-spring-2022.jpg`, `ghent-group.jpg`, `socials.jpeg`, `strings-rach-prok-2025.jpg`, `icso-logo.jpg`) and they'll appear immediately — no code changes needed.
-
-## Ideas if you want to go further
-- Swap the intro logo animation for an actual short video/audio sting (a few bars of a past concert) for stronger brand recall.
-- Add a lightweight photo lightbox/gallery component for past concerts.
-- Consider a CMS-lite approach (a `data/committee.json` file) so next year's committee/exec can be updated without touching code.
-- Add Open Graph meta tags per page for nicer link previews when shared on Instagram/WhatsApp.
+As of August 2026, the current website URL is https://icso.uk/. Note that this may be subject to change in future years.
