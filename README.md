@@ -14,3 +14,8 @@ npm install
 npm start
 ```
 Then, go to a browser and open http://localhost:3000
+
+## The website
+
+As of August 2026, the current website URL is https://icso.uk/
+This may be subject to change in future years.
