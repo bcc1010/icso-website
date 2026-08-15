@@ -13,6 +13,7 @@
   --radius:2px;
   --ease:cubic-bezier(.22,.9,.32,1);
 }
+html{background:var(--ink);}
 
 *{box-sizing:border-box;}
 html{scroll-behavior:smooth;}

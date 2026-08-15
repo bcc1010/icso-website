@@ -14,7 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
 (() => {
   const header = document.getElementById('site-header');
   if (!header) return;
-  const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 12);
+  const onScroll = () => {
+    if (window.scrollY > 40) header.classList.add('scrolled');
+    else if (window.scrollY < 10) header.classList.remove('scrolled');
+  };
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 })();
