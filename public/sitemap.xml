@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://icso.uk/</loc><priority>1.0</priority></url>
+  <url><loc>https://icso.uk/about</loc><priority>0.8</priority></url>
+  <url><loc>https://icso.uk/concerts</loc><priority>0.8</priority></url>
+  <url><loc>https://icso.uk/join</loc><priority>0.8</priority></url>
+  <url><loc>https://icso.uk/support</loc><priority>0.6</priority></url>
+  <url><loc>https://icso.uk/committee</loc><priority>0.6</priority></url>
+  <url><loc>https://icso.uk/contact</loc><priority>0.6</priority></url>
+</urlset>
