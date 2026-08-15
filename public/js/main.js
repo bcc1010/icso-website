@@ -45,8 +45,8 @@ document.addEventListener('DOMContentLoaded', initReveal);
 
 // ---- Count-up for "N years" figures ----
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('[data-count]').forEach(el => {
-    const target = parseInt(el.dataset.count, 10) || 0;
+  document.querySelectorAll('[data-founded]').forEach(el => {
+    const target = new Date().getFullYear() - parseInt(el.dataset.founded, 10);
     const duration = 1200;
     const start = performance.now();
     function tick(now) {
@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(tick);
   });
 });
+
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // ---- Intro splash (once per browser session) ----
 (() => {
