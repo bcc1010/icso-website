@@ -43,26 +43,157 @@
   <!-- <hr class="divider"> -->
 
   <section>
-    <div class="wrap">
-      <div class="section-head reveal">
-        <!-- <p class="eyebrow">Watch</p> -->
-        <h2>ICSO at Cadogan Hall</h2>
-      </div>
-
-      <div class="media-slot reveal" id="watchVideo" data-video-id="-f0cP-uu2Wo"></div>
-      <p style="margin-top:10px;font-size:.85rem;color:var(--ink-soft);text-align:center;font-style:italic;">ICSO performing Rachmaninoff's Piano Concerto No. 3 (Bendit Chan, piano) and Prokofiev's Symphony No. 5 at Cadogan Hall (March 2025)</p>
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Watch & Listen</p>
+      <h2>Recent Highlights</h2>
     </div>
-  </section>
+
+    <div class="media-hub reveal">
+      
+      <!-- LEFT SIDE: Main Video -->
+      <div class="media-hub-main">
+        <div class="media-slot" id="highlightVideo">
+          <iframe id="mainPlayer" src="https://www.youtube.com/embed/-f0cP-uu2Wo?mute=1&start=5497&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3" allow="autoplay; encrypted-media" allowfullscreen style="width:100%; height:100%; border:0;"></iframe>
+          
+          <!-- Custom Mute/Unmute Toggle Button -->
+          <button class="unmute-btn" id="customMuteToggle">
+            <span id="muteIcon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px; margin-top:-2px;">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <line x1="23" y1="9" x2="17" y2="15"></line>
+                <line x1="17" y1="9" x2="23" y2="15"></line>
+              </svg>
+            </span>
+            <span id="muteText">Unmute</span>
+          </button>
+        </div>
+      </div>
+      
+      <!-- RIGHT SIDE: Scrollable Clips List -->
+      <div class="media-hub-list">
+        
+        <div class="media-hub-item active" data-video-id="-f0cP-uu2Wo" data-start="5497">
+          <div class="media-hub-thumb" style="background: url('https://img.youtube.com/vi/-f0cP-uu2Wo/mqdefault.jpg') center/cover;"></div>
+          <div class="media-hub-text">
+            <span class="hub-date">Mar 2025, Cadogan Hall</span>
+            <span class="hub-title">Prokofiev's Fifth Symphony</span>
+            <span class="hub-subtitle">+ Rachmaninoff's Third Piano Concerto (Bendit Chan, piano)</span>
+          </div>
+        </div>
+        
+        <div class="media-hub-item" data-video-id="">
+          <div class="media-hub-thumb" style="background: url('') center/cover;"></div>
+          <div class="media-hub-text">
+            <span class="hub-date">Nov 2025, Royal College of Music</span>
+            <span class="hub-title">Korngold: Violin Concerto (Kaelyn Soh, violin)</span>
+            <span class="hub-subtitle">Clip from our Winter Concert</span>
+          </div>
+        </div>
+
+        <div class="media-hub-item" data-video-id="">
+          <div class="media-hub-thumb" style="background: url('') center/cover;"></div>
+          <div class="media-hub-text">
+            <span class="hub-date">Feb 2026, St George's Chapel (Windsor Castle)</span>
+            <span class="hub-title">Britten: War Requiem</span>
+            <span class="hub-subtitle">Clip from the 80+ minute requiem</span>
+          </div>
+        </div>
+
+        <div class="media-hub-item" data-video-id="9Zhs4WvOpqI" data-start="1953">
+          <div class="media-hub-thumb" style="background: url('https://img.youtube.com/vi/9Zhs4WvOpqI/mqdefault.jpg') center/cover;"></div>
+          <div class="media-hub-text">
+            <span class="hub-date">Jun 2026, Sint-Stefanuskerk Sint-Margrietstraat (Ghent)</span>
+            <span class="hub-title">Dvořák: Cello Concerto in B minor (Robyn Liu, cello) [clip]</span>
+            <span class="hub-subtitle">+ Giminéz's Intermedio (from La Boda de Luis Alonso) + Rimsky-Korsakov's Capriccio Espagnol</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 32px;">
+      <a href="/concerts" class="btn">View All Past Concerts</a>
+    </div>
+  </div>
+</section>
 </main>
 
 <%- include('partials/footer') %>
 
 <script>
 const heroSlides = [
-  { img:'/assets/2026-jun-summer-concert.jpeg', eyebrow:'Past highlight • June 2026', title:'ICSO Tour to<br>Ghent, Belgium', lede:"ICSO and Sinfonietta teamed up with London-based, Belgian, and Spanish university orchestras for two concerts in Ghent amidst the June heatwave. Programmed fiery Spanish works from Giminéz & Rimsky-Korsakov, and featured 4th-year biomedical engineer Robyn Liu in Dvořák's Cello Concerto." },
-  { img:'/assets/war-requiem-2026.jpg', eyebrow:'Past highlight • 28 February 2026', title:"Benjamin Britten's<br>War Requiem", lede:"As part of the Windsor Festival, an extended ICSO joins with Imperial College Choirs, Coventry Cathedral Chorus, Orpheus Sinfonia, the Choristers of St George's Chapel and several solo voices for an anniversary performance of Britten's pacifist masterwork in St George's Chapel, Windsor Castle." }
+  { img:'/assets/2026-windsor-1.jpg', eyebrow:'Past highlight • 28 February 2026', title:"Benjamin Britten's<br>War Requiem", lede:"As part of the Windsor Festival, an extended ICSO joins with Imperial College Choirs, Coventry Cathedral Chorus, Orpheus Sinfonia, the Choristers of St George's Chapel and several solo voices for an anniversary performance of Britten's pacifist masterwork in St George's Chapel, Windsor Castle." },
+  { img:'/assets/2026-jun-summer-concert-3.jpeg', eyebrow:'Past highlight • June 2026', title:'ICSO Tour to<br>Ghent, Belgium', lede:"ICSO and Sinfonietta teamed up with London-based, Belgian, and Spanish university orchestras for two concerts in Ghent amidst the June heatwave. Programmed fiery Spanish works from Giminéz & Rimsky-Korsakov, and featured 4th-year biomedical engineer Robyn Liu in Dvořák's Cello Concerto." },
 ];
 window.__heroSlides = heroSlides;
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const mainPlayer = document.getElementById('mainPlayer');
+  const items = document.querySelectorAll('.media-hub-item');
+  const muteToggleBtn = document.getElementById('customMuteToggle');
+  const muteText = document.getElementById('muteText');
+  const muteIcon = document.getElementById('muteIcon');
+  
+  let hasAutoPlayed = false;
+  let isMuted = true;
+
+  const iconUnmute = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px; margin-top:-2px;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>`;
+  const iconMute = `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px; margin-top:-2px;"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>`;
+
+  muteToggleBtn.addEventListener('click', function() {
+    if (isMuted) {
+      mainPlayer.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'unMute', args: [] }), '*');
+      mainPlayer.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'setVolume', args: [100] }), '*');
+      muteText.textContent = 'Mute';
+      muteIcon.innerHTML = iconMute;
+      isMuted = false;
+    } else {
+      mainPlayer.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'mute', args: [] }), '*');
+      muteText.textContent = 'Unmute';
+      muteIcon.innerHTML = iconUnmute;
+      isMuted = true;
+    }
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !hasAutoPlayed) {
+        let currentSrc = mainPlayer.src;
+        if (!currentSrc.includes('autoplay=1')) {
+          mainPlayer.src = currentSrc + '&autoplay=1';
+        }
+        hasAutoPlayed = true; 
+      }
+    });
+  }, { threshold: 0.5 }); 
+
+  observer.observe(document.getElementById('highlightVideo'));
+
+  items.forEach(item => {
+    item.addEventListener('click', function() {
+      items.forEach(el => el.classList.remove('active'));
+      this.classList.add('active');
+      
+      const videoId = this.getAttribute('data-video-id');
+      const startTimestamp = this.getAttribute('data-start'); 
+      
+      let newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3`;
+      
+      if (startTimestamp) {
+        newSrc += `&start=${startTimestamp}`;
+      }
+      
+      mainPlayer.src = newSrc;
+      
+      isMuted = true;
+      muteText.textContent = 'Unmute';
+      muteIcon.innerHTML = iconUnmute;
+    });
+  });
+});
 </script>
 </body>
 </html>
