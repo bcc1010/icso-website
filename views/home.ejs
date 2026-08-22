@@ -16,6 +16,7 @@
   <button class="hero-arrow left" id="heroPrev" aria-label="Previous highlight">‹</button>
   <button class="hero-arrow right" id="heroNext" aria-label="Next highlight">›</button>
   <div class="hero-dots" id="heroDots"></div>
+  <button id="globalHeroBtn" class="btn ghost">Recent Highlights</button>
 </section>
 
   <section class="tight">
@@ -30,7 +31,7 @@
         <p class="eyebrow">Prizes</p>
         <h3 style="font-size:1.3rem;">Awards and recognition</h3>
         <p>Having won "Universiy Orchestra of the Year" (2008) and with a BAFTA-awarded TV debut on Channel 4 (2002), ICSO is widely regarded as one of the finest university orchestras in the UK.</p>
-        <p>ICSO's recognition is also highlighted the words of Daniel Jemison (LSO Principal Bassoon), who has previously described ICSO as sounding "like a professional orchestra".</p>
+        <p>ICSO's recognition has also been highlighted in the words of Daniel Jemison (LSO Principal Bassoon), who has previously described ICSO as sounding "like a professional orchestra".</p>
       </div>
       <div class="card reveal">
         <p class="eyebrow">In London and going abroad</p>
@@ -42,7 +43,7 @@
 
   <!-- <hr class="divider"> -->
 
-  <section>
+  <section id="recent-highlights">
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Watch & Listen</p>
@@ -123,8 +124,8 @@
 
 <script>
 const heroSlides = [
-  { img:'/assets/2026-windsor-1.jpg', eyebrow:'Past highlight • 28 February 2026', title:"Benjamin Britten's<br>War Requiem", lede:"As part of the Windsor Festival, an extended ICSO joins with Imperial College Choirs, Coventry Cathedral Chorus, Orpheus Sinfonia, the Choristers of St George's Chapel and several solo voices for an anniversary performance of Britten's pacifist masterwork in St George's Chapel, Windsor Castle." },
-  { img:'/assets/2026-jun-summer-concert-3.jpeg', eyebrow:'Past highlight • June 2026', title:'ICSO Tour to<br>Ghent, Belgium', lede:"ICSO and Sinfonietta teamed up with London-based, Belgian, and Spanish university orchestras for two concerts in Ghent amidst the June heatwave. Programmed fiery Spanish works from Giminéz & Rimsky-Korsakov, and featured 4th-year biomedical engineer Robyn Liu in Dvořák's Cello Concerto." },
+  { img:'/assets/2026-jun-summer-concert-3.jpeg', eyebrow:'Past highlight • June 2026', title:'Summer Concert<br>\& Tour to Belgium', lede:"Following a successful summer concert in St Stephen's Church (London), ICSO teamed up with London-based, Belgian, and Spanish university orchestras for concerts in Ghent, Belgium amidst the June heatwave. Programmed fiery works from Giminéz & Rimsky-Korsakov, and featured 4th-year biomedical engineer Robyn Liu in Dvořák's Cello Concerto." },
+  { img:'/assets/2026-windsor-1-sharper.jpg', eyebrow:'Past highlight • 28 February 2026', title:"Benjamin Britten's<br>War Requiem", lede:"As part of the Windsor Festival, an extended ICSO joins with Imperial College Choirs, Coventry Cathedral Chorus, Orpheus Sinfonia, the Choristers of St George's Chapel and several solo voices for an anniversary performance of Britten's pacifist masterwork in St George's Chapel, Windsor Castle." },
 ];
 window.__heroSlides = heroSlides;
 </script>
@@ -158,7 +159,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 
-  const observer = new IntersectionObserver((entries) => {
+  const scrollObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !hasAutoPlayed) {
         let currentSrc = mainPlayer.src;
@@ -170,7 +171,10 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }, { threshold: 0.5 }); 
 
-  observer.observe(document.getElementById('highlightVideo'));
+  const highlightVideo = document.getElementById('highlightVideo');
+  if (highlightVideo) {
+    scrollObserver.observe(highlightVideo);
+  }
 
   items.forEach(item => {
     item.addEventListener('click', function() {
@@ -181,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function() {
       const startTimestamp = this.getAttribute('data-start'); 
       
       let newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&enablejsapi=1&rel=0&modestbranding=1&iv_load_policy=3`;
-      
       if (startTimestamp) {
         newSrc += `&start=${startTimestamp}`;
       }
@@ -193,6 +196,19 @@ document.addEventListener("DOMContentLoaded", function() {
       muteIcon.innerHTML = iconUnmute;
     });
   });
+
+  const globalHeroBtn = document.getElementById('globalHeroBtn');
+  if (globalHeroBtn) {
+    globalHeroBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const section = document.getElementById('recent-highlights');
+      
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  }
 });
 </script>
 </body>

@@ -436,20 +436,24 @@ blockquote.pull cite{display:block;font-family:'Source Sans 3',sans-serif;font-s
   max-height: 420px;
   overflow-y: auto;
   padding-right: 12px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
 }
 
 .media-hub-list::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
+  display: block;
+  -webkit-appearance: none;
 }
 
 .media-hub-list::-webkit-scrollbar-track {
-  background: var(--paper-dim);
-  border-radius: 4px;
+  background: transparent;
 }
 
 .media-hub-list::-webkit-scrollbar-thumb {
-  background: var(--brass-light);
-  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
 }
 
 .media-hub-item {
@@ -502,6 +506,36 @@ blockquote.pull cite{display:block;font-family:'Source Sans 3',sans-serif;font-s
   margin-top: 2px;
   font-style: italic;
 }
+
+ #globalHeroBtn {
+    position: absolute;
+    bottom: 60px; 
+    right: 5%; 
+    z-index: 100;
+    
+    padding: 10px 24px;
+    font-size: 0.9rem;
+    border-width: 1px;
+    cursor: pointer;
+    pointer-events: auto;
+    
+    opacity: 0;
+    animation: simpleFadeIn 1s ease 0.5s forwards;
+  }
+
+  @media (max-width: 900px) {
+    #globalHeroBtn { 
+      bottom: 30px; 
+      right: auto;
+      left: 50%; 
+      transform: translateX(-50%);
+      font-size: 0.8rem; 
+    }
+  }
+
+  @keyframes simpleFadeIn {
+    to { opacity: 1; }
+  }
 
 @media(max-width: 900px) {
   .media-hub {
@@ -663,6 +697,15 @@ img{
   user-select: none;
 }
 
+@media (max-width: 768px) {
+    nav img,
+    header img,
+    .logo {
+      transform: scale(0.85);
+      transform-origin: right center;
+    }
+  }
+  
 /* Persistent bottom banner — hides itself once the real footer scrolls into view */
 .sticky-banner{
   position:fixed;left:0;right:0;bottom:0;z-index:60;
