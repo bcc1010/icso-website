@@ -511,7 +511,7 @@ blockquote.pull cite{display:block;font-family:'Source Sans 3',sans-serif;font-s
     position: absolute;
     bottom: 60px; 
     right: 5%; 
-    z-index: 100;
+    z-index: 40;
     
     padding: 10px 24px;
     font-size: 0.9rem;
