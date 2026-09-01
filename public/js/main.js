@@ -214,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fillWrap(activeWrap, heroSlides[0]);
   const introDelay = document.getElementById('introOverlay') ? 1400 : 0;
   activeWrap.querySelectorAll('.eyebrow, h1, .lede').forEach(node => window.revealWords(node, introDelay));
+  inactiveWrap.style.transform = 'translateX(9999px)';
 
   heroSlides.forEach((_, i) => {
     const dot = document.createElement('span');
