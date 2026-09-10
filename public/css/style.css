@@ -749,21 +749,31 @@ img{
   }
 
   header p,
-  header .subtitle {
+  header small,
+  header .tagline,
+  header span:last-of-type {
     display: none !important;
   }
 
   header h1,
-  header .title {
-    font-size: 115% !important;
+  header .title,
+  header a {
+    font-size: 1.15rem !important;
   }
 
   header img,
+  header .logo {
+    max-width: 55px !important;
+    height: auto !important;
+  }
+
   header svg,
-  .menu-toggle,
-  .hamburger,
-  .navbar-toggler {
-    transform: scale(0.9);
+  header button,
+  header .hamburger {
+    max-width: 28px !important;
+    height: auto !important;
+    transform: scale(0.85);
+    transform-origin: right center;
   }
 
   .hero .wrap {
