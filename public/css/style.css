@@ -807,10 +807,10 @@ img{
   }
 }
 
-html {
+html, body {
   background-color: #061524;
 }
 
-body {
+header, main {
   background-color: #f8f6f0;
 }
