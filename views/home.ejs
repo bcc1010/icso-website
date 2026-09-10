@@ -217,6 +217,11 @@ document.querySelectorAll('.card').forEach(card => {
     this.querySelector('.read-more-btn').innerHTML = isExpanded ? 'Show less ▲' : 'Read more ▼';
   });
 });
+
+heroSlides.forEach(slide => {
+  const img = new Image();
+  img.src = slide.img;
+});
 </script>
 </body>
 </html>
