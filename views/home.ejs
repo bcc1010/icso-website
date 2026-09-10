@@ -218,9 +218,20 @@ document.querySelectorAll('.card').forEach(card => {
   });
 });
 
+const preloadContainer = document.createElement('div');
+preloadContainer.style.display = 'none';
+document.body.appendChild(preloadContainer);
+
 heroSlides.forEach(slide => {
-  const img = new Image();
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.as = 'image';
+  link.href = slide.img;
+  document.head.appendChild(link);
+
+  const img = document.createElement('img');
   img.src = slide.img;
+  preloadContainer.appendChild(img);
 });
 </script>
 </body>
