@@ -204,6 +204,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 });
+
+document.querySelectorAll('.card').forEach(card => {
+  const btn = document.createElement('div');
+  btn.className = 'read-more-btn';
+  btn.innerHTML = 'Read more ▼';
+  card.appendChild(btn);
+
+  card.addEventListener('click', function() {
+    this.classList.toggle('expanded');
+    const isExpanded = this.classList.contains('expanded');
+    this.querySelector('.read-more-btn').innerHTML = isExpanded ? 'Show less ▲' : 'Read more ▼';
+  });
+});
 </script>
 </body>
 </html>

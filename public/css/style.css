@@ -750,33 +750,59 @@ img{
 
   header p,
   header small,
-  header .tagline,
-  header span:last-of-type {
+  header .tagline {
     display: none !important;
   }
 
   header h1,
-  header .title,
-  header a {
-    font-size: 1.15rem !important;
+  header .title {
+    font-size: 110% !important;
   }
 
   header img,
-  header .logo {
-    max-width: 55px !important;
-    height: auto !important;
-  }
-
+  header .logo,
   header svg,
   header button,
   header .hamburger {
-    max-width: 28px !important;
-    height: auto !important;
     transform: scale(0.85);
-    transform-origin: right center;
   }
 
   .hero .wrap {
     font-size: 75%;
+  }
+}
+
+.read-more-btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .card p:nth-of-type(2) {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .card p:nth-of-type(n+3) {
+    display: none;
+  }
+
+  .card.expanded p:nth-of-type(2) {
+    -webkit-line-clamp: unset;
+  }
+  
+  .card.expanded p:nth-of-type(n+3) {
+    display: block;
+  }
+
+  .read-more-btn {
+    display: block;
+    opacity: 0.7;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 12px;
+    padding-top: 8px;
   }
 }
