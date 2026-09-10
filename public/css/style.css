@@ -745,7 +745,7 @@ img{
 
 @media (max-width: 768px) {
   #globalHeroBtn {
-    transform: translateY(-20px);
+    transform: translate(-50%, -20px);
     font-size: 0.85rem;
     padding: 8px 16px;
   }
@@ -755,5 +755,9 @@ img{
   header p, 
   header span {
     font-size: 75% !important;
+  }
+
+  .hero .wrap {
+    font-size: 75%;
   }
 }
