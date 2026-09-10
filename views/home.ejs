@@ -219,19 +219,23 @@ document.querySelectorAll('.card').forEach(card => {
 });
 
 const preloadContainer = document.createElement('div');
-preloadContainer.style.display = 'none';
+preloadContainer.style.cssText = 'position: absolute; width: 1px; height: 1px; overflow: hidden; opacity: 0; pointer-events: none; top: -9999px; left: -9999px;';
 document.body.appendChild(preloadContainer);
 
-heroSlides.forEach(slide => {
+window.__heroPreloaded = heroSlides.map(slide => {
   const link = document.createElement('link');
   link.rel = 'preload';
   link.as = 'image';
   link.href = slide.img;
   document.head.appendChild(link);
 
-  const img = document.createElement('img');
-  img.src = slide.img;
-  preloadContainer.appendChild(img);
+  const div = document.createElement('div');
+  div.style.backgroundImage = `url("${slide.img}")`;
+  div.style.width = '1px';
+  div.style.height = '1px';
+  preloadContainer.appendChild(div);
+
+  return div;
 });
 </script>
 </body>
