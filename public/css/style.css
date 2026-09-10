@@ -806,3 +806,11 @@ img{
     padding-top: 8px;
   }
 }
+
+html {
+  background-color: #061524;
+}
+
+body {
+  background-color: #f8f6f0;
+}
