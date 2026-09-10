@@ -743,3 +743,17 @@ img{
 
 .steps-list a{ color:var(--brass-light); }
 
+@media (max-width: 768px) {
+  #globalHeroBtn {
+    transform: translateY(-20px);
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  header, 
+  header h1, 
+  header p, 
+  header span {
+    font-size: 75% !important;
+  }
+}
